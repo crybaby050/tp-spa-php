@@ -8,19 +8,22 @@
             Ajouter un étudiant
         </h2>
 
-        <form action="" method="POST" class="space-y-6">
+        <form action="<?=WEBROOT?>" method="post" class="space-y-6">
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Matricule</label>
-                    <input type="text" name="matricule" 
+                    <input type="text" name="matricule"  value="<?=$save["matricule"]??""?>"
                         class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400 focus:outline-none">
+                          <p class="mt-2 text-sm text-red-600" id="email-error"><?=$errors["matricule"]??""?></p>
                 </div>
 
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Nom</label>
-                    <input type="text" name="nom" 
+                    <input type="text" name="nom" value="<?=$save["nom"]??""?>"
                         class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400 focus:outline-none">
+                                                  <p class="mt-2 text-sm text-red-600" id="email-error"><?=$errors["nom"]??""?></p>
+
                 </div>
 
                 <div>
@@ -65,11 +68,13 @@
                     </select>
                 </div>
             </div>
+            <input type="hidden" name="page" value="ajout">
 
             <div class="text-center pt-4">
                 <button type="submit"
                     class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
                     Enregistrer
+                    
                 </button>
             </div>
 
