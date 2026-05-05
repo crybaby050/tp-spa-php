@@ -53,5 +53,5 @@ $view=ROOT."views/etudiants";
       $classes=getAllClasses();
     require_once($view."/ajout.php");
  }else{
-    echo "page introuvable";
+   echo "page introuvable";
  }
