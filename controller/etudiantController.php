@@ -9,7 +9,8 @@ $view=ROOT."views/etudiants";
     $page=$_REQUEST["page"];
  }
  if ($page=="alletudiant") {
-    $etudiants=getAllEtudiant();
+    $etudiants=getAllEtudiantWhithClasse() ;
+    
     require_once($view."/alletudiant.php");
  }elseif ($page=="dev") {
     $etudiants=getEtudiantsByFiliere(filiere: "dev");
@@ -32,20 +33,24 @@ $view=ROOT."views/etudiants";
     }
  if(count($errors)==0){
     $newEtudiant=[
+         "id"=>getId("etudiants"),
+         "matricule"=>getMatricle(),
         "nom"=>$_POST["nom"],
         "prenom"=>$_POST["prenom"],
         "email"=>$_POST["email"],
         "telephone"=>$_POST["telephone"],
-        "niveau"=>$_POST["niveau"],
-        "filiere"=>$_POST["filiere"]
+        "classe_id"=>$_POST["classe_id"],
+        
     ];
-    // addEtudiant($newEtudiant);
-    header("location:".WEBROOT."?page=alletudiant");
+   //  var_dump($newEtudiant);
+   //  die;
+    addEtudiant($newEtudiant);
+    header("location:".WEBROOT."?controller=etudiant&page=alletudiant");
     exit();
  }
    
     // var_dump($_POST);
-
+      $classes=getAllClasses();
     require_once($view."/ajout.php");
  }else{
     echo "page introuvable";

@@ -2,6 +2,7 @@
 require_once(ROOT."model/classeModel.php");
 $view=ROOT."views/classes";
 
+// var_dump(getClassesById(1));
 
  $page="allclasse";
  if (isset($_REQUEST["page"])) {

@@ -1,5 +1,5 @@
 {
-    "etudiants":[
+    "etudiants": [
         {
             "id": 1,
             "matricule": "MAT0004",
@@ -7,17 +7,34 @@
             "prenom": "Moussa",
             "email": "moussa.diallo@example.com",
             "telephone": "7712345681",
-            "classe_id":1
-            
+            "classe_id": 1
         },
         {
-           "id": 2,
+            "id": 2,
             "matricule": "MAT0005",
             "nom": "Bernard",
             "prenom": "Lucas",
             "email": "lucas.bernard@example.com",
             "telephone": "7712345682",
-            "classe_id":2
+            "classe_id": 2
+        },
+        {
+            "id": 1227051,
+            "matricule": "MAT00652677",
+            "nom": "Ut dolore officia mo",
+            "prenom": "Quaerat quia incidun",
+            "email": "hupyg@mailinator.com",
+            "telephone": "+1 (544) 775-4337",
+            "classe_id": "1"
+        },
+        {
+            "id": 362580,
+            "matricule": "MAT001072987",
+            "nom": "Incididunt irure dol",
+            "prenom": "Aliquip rerum et aut",
+            "email": "mefifuje@mailinator.com",
+            "telephone": "+1 (763) 499-1312",
+            "classe_id": "3"
         }
     ],
     "niveaux": [
@@ -40,31 +57,30 @@
             "libelle": "DN"
         }
     ],
-    "classes":[
+    "classes": [
         {
-            "id":1,
-            "libelle":"L1 Dev",
-            "niveau_id":1,    
-            "filiere_id":1
+            "id": 1,
+            "libelle": "L1 Dev",
+            "niveau_id": 1,
+            "filiere_id": 1
         },
         {
-            "id":2,
-            "libelle":"L1 DN",
-            "niveau_id":1,    
-            "filiere_id":2
+            "id": 2,
+            "libelle": "L1 DN",
+            "niveau_id": 1,
+            "filiere_id": 2
         },
         {
-            "id":3,
-            "libelle":"L2 Dev",
-            "niveau_id":2,    
-            "filiere_id":1
+            "id": 3,
+            "libelle": "L2 Dev",
+            "niveau_id": 2,
+            "filiere_id": 1
         },
         {
-            "id":4,
-            "libelle":"L2 DN",
-            "niveau_id":2,    
-            "filiere_id":2
+            "id": 4,
+            "libelle": "L2 DN",
+            "niveau_id": 2,
+            "filiere_id": 2
         }
-
     ]
 }

@@ -31,7 +31,7 @@
                             <td class="px-6 py-4"><?= $value["telephone"] ?></td>
                             <td class="px-6 py-4">
                                 <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
-                                    <?= $value["classe_id"] ?>
+                                    <?= $value["libelle"] ?>
                                 </span>
                             </td>
                             <!-- <td class="px-6 py-4">

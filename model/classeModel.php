@@ -6,6 +6,15 @@ function getAllClasses():array{
     return jsonToArray("classes")  ;
 }
 
+function getClassesById(int $id):array{
+    $classes=getAllClasses();
+    foreach ($classes as $classe) {
+        if ($classe["id"]==$id) {
+            return $classe;
+        }
+    }
+    return [];
+}
 
 // function getEtudiantsByFilter(callable $filter):array{
 //        $etudiants=getAllEtudiant();

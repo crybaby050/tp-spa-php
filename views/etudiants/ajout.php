@@ -46,28 +46,19 @@
 
                 <!-- Select Niveau -->
                 <div>
-                    <label class="block text-gray-700 font-semibold mb-2">Niveau</label>
-                    <select name="niveau" 
+                    <label class="block text-gray-700 font-semibold mb-2">Classe</label>
+                    <select name="classe_id" 
                         class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400 focus:outline-none">
-                        <option value="">-- Choisir niveau --</option>
-                        <option value="L1">L1</option>
-                        <option value="L2">L2</option>
-                        <option value="L3">L3</option>
+                        <option value="">-- Choisir une classe --</option>
+                        <?php foreach ($classes as $classe): ?>
+                        <option value="<?=$classe["id"]?>"><?=$classe["libelle"]?></option>
+                        <?php endforeach  ?>
+
                     </select>
                 </div>
 
-                <!-- Select Filière -->
-                <div>
-                    <label class="block text-gray-700 font-semibold mb-2">Filière</label>
-                    <select name="filiere" 
-                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400 focus:outline-none">
-                        <option value="">-- Choisir filière --</option>
-                        <option value="Dev">Développement</option>
-                        <option value="Réseau">Réseau</option>
-                        <option value="Design">Design</option>
-                    </select>
-                </div>
-            </div>
+             
+            <input type="hidden" name="controller" value="etudiant">
             <input type="hidden" name="page" value="ajout">
 
             <div class="text-center pt-4">
