@@ -1,0 +1,70 @@
+{
+    "etudiants":[
+        {
+            "id": 1,
+            "matricule": "MAT0004",
+            "nom": "Diallo",
+            "prenom": "Moussa",
+            "email": "moussa.diallo@example.com",
+            "telephone": "7712345681",
+            "classe_id":1
+            
+        },
+        {
+           "id": 2,
+            "matricule": "MAT0005",
+            "nom": "Bernard",
+            "prenom": "Lucas",
+            "email": "lucas.bernard@example.com",
+            "telephone": "7712345682",
+            "classe_id":2
+        }
+    ],
+    "niveaux": [
+        {
+            "id": 1,
+            "libelle": "L1"
+        },
+        {
+            "id": 2,
+            "libelle": "L2"
+        }
+    ],
+    "filieres": [
+        {
+            "id": 1,
+            "libelle": "Dev"
+        },
+        {
+            "id": 2,
+            "libelle": "DN"
+        }
+    ],
+    "classes":[
+        {
+            "id":1,
+            "libelle":"L1 Dev",
+            "niveau_id":1,    
+            "filiere_id":1
+        },
+        {
+            "id":2,
+            "libelle":"L1 DN",
+            "niveau_id":1,    
+            "filiere_id":2
+        },
+        {
+            "id":3,
+            "libelle":"L2 Dev",
+            "niveau_id":2,    
+            "filiere_id":1
+        },
+        {
+            "id":4,
+            "libelle":"L2 DN",
+            "niveau_id":2,    
+            "filiere_id":2
+        }
+
+    ]
+}

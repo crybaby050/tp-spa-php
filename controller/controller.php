@@ -1,6 +1,6 @@
 <?php
-require_once("model/model.php");
-require_once("views/header.php");
+require_once(ROOT."model/model.php");
+require_once(ROOT."views/header.php");
 // die("after header");
 
 
@@ -10,14 +10,14 @@ require_once("views/header.php");
  }
  if ($page=="alletudiant") {
     $etudiants=getAllEtudiant();
-    require_once("views/alletudiant.php");
+    require_once(ROOT."views/alletudiant.php");
  }elseif ($page=="dev") {
     $etudiants=getEtudiantsByFiliere(filiere: "dev");
-    require_once("views/dev.php");
+    require_once(ROOT."views/dev.php");
  } 
  elseif ($page=="dn") {
     $etudiants=getEtudiantsByFiliere(filiere: "dn");
-    require_once("views/dn.php");
+    require_once(ROOT."views/dn.php");
  }
  elseif ($page=="ajout") {
     $errors=[];
@@ -46,8 +46,8 @@ require_once("views/header.php");
    
     // var_dump($_POST);
 
-    require_once("views/ajout.php");
+    require_once(ROOT."views/ajout.php");
  }else{
     echo "page introuvable";
  }
- require_once("views/footer.php");
+ require_once(ROOT."views/footer.php");
